@@ -6,7 +6,7 @@
     <title>Iora Electrical | Nottingham's Precision Power Solutions</title>
     <style>
         :root {
-            --primary-blue: #0a1f2c;
+            --primary-dark: #0a1f2c; /* Matches your logo background exactly */
             --text-dark: #000;
             --bg-light: #f4f4f4;
             --accent-blue: #4a6fa5;
@@ -28,24 +28,25 @@
             padding: 15px 0; font-size: 13px; margin-bottom: 10px;
         }
         nav .links a { margin-right: 20px; text-decoration: none; color: var(--accent-blue); font-weight: 500; }
-        .quote-link { text-decoration: none; color: inherit; font-weight: bold; font-size: 15px; border: 1px solid var(--primary-blue); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
-        .quote-link:hover { background: var(--primary-blue); color: #fff; }
+        .quote-link { text-decoration: none; color: inherit; font-weight: bold; font-size: 15px; border: 1px solid var(--primary-dark); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
+        .quote-link:hover { background: var(--primary-dark); color: #fff; }
 
-        /* LOGO FIX: Full Banner Coverage */
+        /* SEAMLESS BANNER: No more "box in a box" */
         .hero { 
-            background-color: var(--primary-blue); 
+            background-color: var(--primary-dark); 
             margin-bottom: 40px; 
             display: flex; 
             justify-content: center;
             align-items: center;
             border-radius: 12px;
             overflow: hidden;
-            height: 300px; /* Increased height for better impact */
+            height: 300px; 
+            width: 100%;
         }
         .hero img { 
-            width: 100%; 
-            height: 100%;
-            object-fit: cover; /* This makes the logo/banner image fill the entire space */
+            max-width: 85%; 
+            max-height: 75%;
+            object-fit: contain; 
             display: block; 
         }
 
@@ -61,60 +62,60 @@
         .service-card h3 { margin: 0 0 10px 0; font-size: 18px; font-weight: bold; }
         .service-card p { font-size: 12px; color: #666; margin: 0; line-height: 1.6; }
 
-        /* FEATURE BOX FIX: Alignment with text */
+        /* FEATURE BOX: Single Logo Aligned with Grouped Text */
         .feature-box { 
             background-color: var(--bg-light); 
             padding: 40px; border-radius: 15px; 
             margin-bottom: 60px;
+            display: flex;
+            align-items: center;
         }
-        .feature-item { 
-            display: flex; 
-            align-items: center; /* Levels the logo with the text */
-            margin-bottom: 25px; 
-        }
-        .feature-item:last-child { margin-bottom: 0; }
-        .feature-icon { 
-            margin-right: 25px; 
+        .feature-icon-single { 
+            margin-right: 30px; 
             flex-shrink: 0;
             display: flex;
             align-items: center;
         }
-        .feature-icon img { 
-            width: 50px; /* Adjusted for better visibility */
-            height: auto; 
-            border-radius: 5px;
-        }
-        .feature-text p { margin: 0; font-size: 15px; line-height: 1.5; }
+        .feature-icon-single img { width: 60px; height: 60px; border-radius: 8px; }
+        .feature-text-group p { margin: 8px 0; font-size: 15px; }
 
-        /* CONTACT SECTION: Expanded without map */
+        /* Contact & Map */
         .contact-container {
-            max-width: 600px;
-            margin: 40px auto 0;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 50px; margin-top: 40px;
             border-top: 1px solid #eee; padding-top: 40px;
-            text-align: center;
         }
-        .contact-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+        .contact-form { display: flex; flex-direction: column; gap: 12px; }
         .contact-form input, .contact-form textarea {
-            padding: 14px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; width: 100%; box-sizing: border-box;
+            padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px;
         }
         .contact-form button {
-            background-color: var(--primary-blue); color: white;
-            padding: 16px; border: none; border-radius: 6px;
-            cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 16px;
+            background-color: var(--primary-dark); color: white;
+            padding: 14px; border: none; border-radius: 6px;
+            cursor: pointer; font-weight: bold; transition: 0.3s;
         }
         .contact-form button:hover { background: var(--accent-blue); }
 
+        .map-wrapper {
+            width: 100%; height: 320px;
+            border-radius: 12px; overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 80px; padding: 40px 0;
-            display: flex; justify-content: space-between; align-items: center;
+            margin-top: 60px; padding: 40px 0;
+            display: flex; justify-content: space-between; align-items: flex-start;
             border-top: 1px solid #eee;
         }
-        .cert-logos img { height: 45px; opacity: 0.8; margin-left: 20px; }
+        .cert-logos { display: flex; align-items: center; gap: 20px; margin-top: 10px; }
+        .cert-logos img { height: 45px; opacity: 0.8; }
 
         @media (max-width: 768px) {
-            .services-grid { grid-template-columns: 1fr; }
+            .services-grid, .contact-container { grid-template-columns: 1fr; }
+            .feature-box { flex-direction: column; text-align: center; }
+            .feature-icon-single { margin-right: 0; margin-bottom: 20px; }
             .hero { height: 200px; }
-            footer { flex-direction: column; gap: 20px; text-align: center; }
         }
     </style>
 </head>
@@ -153,54 +154,29 @@
         </section>
 
         <div style="text-align: center; margin-bottom: 40px;">
-            <span style="background: var(--primary-blue); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Based in Nottingham</span>
+            <span style="background: var(--primary-dark); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Based in Nottingham</span>
             <h2 style="font-size: 28px; margin: 12px 0 5px;">Reliable Electrical Care</h2>
-            <p style="color: #666;">Serving West Bridgford, Beeston, Arnold, and beyond.</p>
         </div>
 
         <section class="feature-box">
-            <div class="feature-item">
-                <div class="feature-icon"><img src="logo-small.png" alt="Iora Icon"></div>
-                <div class="feature-text">
-                    <p><strong>Transparent Pricing:</strong> Competitive local rates with absolutely no hidden costs.</p>
-                </div>
+            <div class="feature-icon-single">
+                <img src="logo-small.png" alt="Iora Icon">
             </div>
-            <div class="feature-item">
-                <div class="feature-icon"><img src="logo-small.png" alt="Iora Icon"></div>
-                <div class="feature-text">
-                    <p><strong>Expert Quality:</strong> Fully certified work with a focus on safety and precision craftsmanship.</p>
-                </div>
+            <div class="feature-text-group">
+                <p><strong>Transparent Pricing:</strong> Competitive local rates with absolutely no hidden costs.</p>
+                <p><strong>Professional Craftsmanship:</strong> We treat your property with the utmost respect and precision.</p>
             </div>
         </section>
 
         <section id="contact-section" class="contact-container">
-            <h2 style="margin: 0;">Get a Free Quote</h2>
-            <p style="font-size: 14px; color: #666; margin-top: 10px;">Message us for a consultation on your next project.</p>
-            
-            <form action="https://formspree.io/f/maqdlpeq" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="6" placeholder="Tell us about the job..." required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-
-            <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
-                <p style="font-size: 14px; margin-bottom: 5px;">Prefer to talk?</p>
-                <a href="tel:07417552480" style="font-weight: bold; color: #000; text-decoration: none; font-size: 22px;">07417552480</a>
-            </div>
-        </section>
-
-        <footer>
             <div>
-                <p style="font-size: 13px; color: var(--accent-blue); font-weight: bold; margin: 0;">Iora Electrical Ltd.</p>
-                <p style="font-size: 11px; color: #999; margin: 0;">© 2026 | Nottingham, UK</p>
-            </div>
-            <div class="cert-logos">
-                <img src="niceic.png" alt="NICEIC">
-                <img src="napit.png" alt="NAPIT">
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
-
+                <h2 style="margin-top: 0;">Get a Free Quote</h2>
+                <form action="https://formspree.io/f/maqdlpeq" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div style="margin-top: 20px;">
+                    <a href="mailto:tommayfield@ioraelectrical.co.uk" style="color: var(--accent-blue); text-decoration: none; font-size: 14px; display: block; margin-bottom: 5px;">tommayfield@ioraelectrical.co.uk</a>
+                    <a href="tel:07417552480" style="font-weight: bold; color: #000; text-decoration: none; font-size: 1
