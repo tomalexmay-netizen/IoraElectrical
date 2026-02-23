@@ -6,7 +6,8 @@
     <title>Iora Electrical | Nottingham's Precision Power Solutions</title>
     <style>
         :root {
-            --primary-dark: #0a1f2c; /* Matches your logo background exactly */
+            /* Matches the exact dark blue background of your logo */
+            --primary-dark: #0a1f2c; 
             --text-dark: #000;
             --bg-light: #f4f4f4;
             --accent-blue: #4a6fa5;
@@ -31,7 +32,7 @@
         .quote-link { text-decoration: none; color: inherit; font-weight: bold; font-size: 15px; border: 1px solid var(--primary-dark); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
         .quote-link:hover { background: var(--primary-dark); color: #fff; }
 
-        /* SEAMLESS BANNER: No more "box in a box" */
+        /* SEAMLESS BANNER: Matches logo background */
         .hero { 
             background-color: var(--primary-dark); 
             margin-bottom: 40px; 
@@ -62,7 +63,7 @@
         .service-card h3 { margin: 0 0 10px 0; font-size: 18px; font-weight: bold; }
         .service-card p { font-size: 12px; color: #666; margin: 0; line-height: 1.6; }
 
-        /* FEATURE BOX: Single Logo Aligned with Grouped Text */
+        /* FEATURE BOX: Single Logo Aligned with Both Lines of Text */
         .feature-box { 
             background-color: var(--bg-light); 
             padding: 40px; border-radius: 15px; 
@@ -79,7 +80,7 @@
         .feature-icon-single img { width: 60px; height: 60px; border-radius: 8px; }
         .feature-text-group p { margin: 8px 0; font-size: 15px; }
 
-        /* Contact & Map */
+        /* Contact & Map Section */
         .contact-container {
             display: grid; grid-template-columns: 1fr 1fr;
             gap: 50px; margin-top: 40px;
@@ -154,8 +155,9 @@
         </section>
 
         <div style="text-align: center; margin-bottom: 40px;">
-            <span style="background: var(--primary-dark); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Based in Nottingham</span>
+            <span style="background: var(--primary-dark); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">BASED IN NOTTINGHAM</span>
             <h2 style="font-size: 28px; margin: 12px 0 5px;">Reliable Electrical Care</h2>
+            <p style="color: #666; margin: 0;">Serving West Bridgford, Beeston, Arnold, and beyond.</p>
         </div>
 
         <section class="feature-box">
@@ -178,5 +180,35 @@
                     <button type="submit">Send Message</button>
                 </form>
                 <div style="margin-top: 20px;">
-                    <a href="mailto:tommayfield@ioraelectrical.co.uk" style="color: var(--accent-blue); text-decoration: none; font-size: 14px; display: block; margin-bottom: 5px;">tommayfield@ioraelectrical.co.uk</a>
-                    <a href="tel:07417552480" style="font-weight: bold; color: #000; text-decoration: none; font-size: 1
+                    <a href="tel:07417552480" style="font-weight: bold; color: #000; text-decoration: none; font-size: 18px;">07417552480</a>
+                </div>
+            </div>
+
+            <div>
+                <h2 style="margin-top: 0;">Our Service Area</h2>
+                <div class="map-wrapper">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153773.0645609446!2d-1.2917718042468305!3d52.95410526084627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c2040683a48d%3A0xe5a99564c767f4c3!2sNottingham!5e0!3m2!1sen!2suk!4v1708700000000!5m2!1sen!2suk">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <p style="font-size: 13px; color: var(--accent-blue); font-weight: bold; margin-bottom: 5px;">Iora Electrical Ltd.</p>
+                <div class="cert-logos">
+                    <img src="niceic.png" alt="NICEIC">
+                    <img src="napit.png" alt="NAPIT">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
