@@ -27,8 +27,10 @@
             display: flex; justify-content: space-between; align-items: center;
             padding: 10px 0; font-size: 13px; margin-bottom: 20px;
         }
-        nav .links a { margin-right: 20px; text-decoration: none; color: #4a6fa5; }
-        .quote-link { text-decoration: none; color: inherit; font-weight: bold; font-size: 16px; }
+        nav .links a { margin-right: 20px; text-decoration: none; color: #4a6fa5; transition: 0.3s; }
+        nav .links a:hover { text-decoration: underline; }
+        .quote-link { text-decoration: none; color: inherit; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        .quote-link:hover { color: #4a6fa5; }
 
         /* Hero Banner */
         .hero {
@@ -84,8 +86,9 @@
         /* Contact Section */
         .contact-info { margin-top: 50px; font-size: 14px; }
         .contact-info p { margin: 15px 0; }
-        .email-link { color: #4a6fa5; font-weight: bold; text-decoration: none; font-size: 16px; }
-        .phone-num { font-weight: bold; font-size: 16px; display: block; margin-top: 10px; }
+        .email-link { color: #4a6fa5; font-weight: bold; text-decoration: none; font-size: 16px; transition: 0.3s; }
+        .email-link:hover { text-decoration: underline; }
+        .phone-num { font-weight: bold; font-size: 16px; display: block; margin-top: 10px; color: inherit; text-decoration: none; }
 
         /* Footer */
         footer {
@@ -100,6 +103,8 @@
         .footer-nav h4 { margin: 0 0 8px 0; font-size: 12px; font-weight: bold; }
         .footer-nav ul { list-style: none; padding: 0; margin: 0; }
         .footer-nav li { font-size: 11px; color: #666; margin-bottom: 4px; }
+        .footer-nav a { color: inherit; text-decoration: none; transition: 0.3s; }
+        .footer-nav a:hover { color: #4a6fa5; }
 
         @media (max-width: 768px) {
             .services-grid { grid-template-columns: 1fr; }
@@ -113,8 +118,8 @@
         <nav>
             <div class="links">
                 <a href="#">Home</a>
-                <a href="#">Certifications</a>
-                <a href="#">Services</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#services">Services</a>
             </div>
             <a href="mailto:tommayfield@ioraelectrical.co.uk" class="quote-link">Request a quote</a>
         </nav>
@@ -123,7 +128,7 @@
             <img src="logo.png" alt="Iora Electrical Banner">
         </section>
 
-        <section class="services-grid">
+        <section id="services" class="services-grid">
             <div class="service-card">
                 <img src="residential.png" alt="Residential">
                 <h3>Residential.</h3>
@@ -167,10 +172,10 @@
         <div class="contact-info">
             <p>Contact us for more information. Please feel free to upload your electrical issues or new works to be carried out via the Email Address shown or the Telegram App with the number provided.</p>
             <a href="mailto:tommayfield@ioraelectrical.co.uk" class="email-link">tommayfield@ioraelectrical.co.uk</a>
-            <span class="phone-num">Phone: 07417552480</span>
+            <a href="tel:07417552480" class="phone-num">Phone: 07417552480</a>
         </div>
 
-        <footer>
+        <footer id="certifications">
             <div class="footer-left">
                 <p>Fully Approved Electricians.</p>
                 <p>Fully Certified.</p>
@@ -182,15 +187,27 @@
             <div class="footer-nav">
                 <div>
                     <h4>Company</h4>
-                    <ul><li>Home</li><li>About</li><li>Contact</li></ul>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">About</a></li>
+                        <li><a href="mailto:tommayfield@ioraelectrical.co.uk">Contact</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h4>Services</h4>
-                    <ul><li>Residential</li><li>Commercial</li><li>Smart Home</li></ul>
+                    <ul>
+                        <li><a href="#services">Residential</a></li>
+                        <li><a href="#services">Commercial</a></li>
+                        <li><a href="#services">Smart Home</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h4>Legal</h4>
-                    <ul><li>Certifications</li><li>Terms</li><li>Privacy</li></ul>
+                    <ul>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
                 </div>
             </div>
         </footer>
