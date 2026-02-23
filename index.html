@@ -6,70 +6,189 @@
     <title>Iora Electrical | Nottingham's Precision Power Solutions</title>
     <style>
         :root {
+            /* Exact match for your logo background */
             --primary-dark: #0a1f2c; 
             --text-dark: #000;
             --bg-light: #f4f4f4;
             --accent-blue: #4a6fa5;
         }
+
         html { scroll-behavior: smooth; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.4; color: var(--text-dark); background-color: #fff; }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0; padding: 0; line-height: 1.6;
+            color: var(--text-dark); background-color: #fff;
+        }
+
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; font-size: 13px; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 0; font-size: 13px; margin-bottom: 10px;
+        }
         nav .links a { margin-right: 20px; text-decoration: none; color: var(--accent-blue); font-weight: 500; }
-        .quote-link { text-decoration: none; color: inherit; font-weight: bold; border: 1px solid var(--primary-dark); padding: 8px 15px; border-radius: 5px; }
-        
-        /* BANNER FIX */
-        .hero { background-color: var(--primary-dark); margin-bottom: 40px; display: flex; justify-content: center; align-items: center; border-radius: 12px; height: 300px; width: 100%; overflow: hidden; }
-        .hero img { max-width: 85%; max-height: 75%; object-fit: contain; }
+        .quote-link { text-decoration: none; color: inherit; font-weight: bold; font-size: 15px; border: 1px solid var(--primary-dark); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
+        .quote-link:hover { background: var(--primary-dark); color: #fff; }
 
-        /* SERVICES */
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 50px; }
-        .service-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 15px; }
-        .service-card h3 { margin: 0 0 10px 0; font-size: 18px; }
-        .service-card p { font-size: 12px; color: #666; }
+        /* SEAMLESS BANNER: Matches logo background */
+        .hero { 
+            background-color: var(--primary-dark); 
+            margin-bottom: 40px; 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px; 
+            width: 100%;
+        }
+        .hero img { 
+            max-width: 85%; 
+            max-height: 75%;
+            object-fit: contain; 
+            display: block; 
+        }
 
-        /* SINGLE LOGO FEATURE */
-        .feature-box { background-color: var(--bg-light); padding: 40px; border-radius: 15px; margin-bottom: 60px; display: flex; align-items: center; }
-        .feature-icon-single { margin-right: 30px; flex-shrink: 0; }
-        .feature-icon-single img { width: 60px; height: 60px; border-radius: 8px; }
+        /* Services Grid */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 25px; margin-bottom: 50px;
+        }
+        .service-card img {
+            width: 100%; height: 220px; object-fit: cover;
+            border-radius: 12px; margin-bottom: 15px;
+        }
+        .service-card h3 { margin: 0 0 10px 0; font-size: 18px; font-weight: bold; }
+        .service-card p { font-size: 12px; color: #666; margin: 0; line-height: 1.6; }
+
+        /* FEATURE BOX: Single Logo */
+        .feature-box { 
+            background-color: var(--bg-light); 
+            padding: 40px; border-radius: 15px; 
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon-single { 
+            margin-right: 30px; 
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon-single img { width: 65px; height: 65px; border-radius: 8px; }
         .feature-text-group p { margin: 8px 0; font-size: 15px; }
 
-        /* CONTACT & MAP */
-        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 40px; border-top: 1px solid #eee; padding-top: 40px; }
-        .contact-form { display: flex; flex-direction: column; gap: 12px; }
-        .contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; }
-        .contact-form button { background-color: var(--primary-dark); color: white; padding: 14px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-        .map-wrapper { width: 100%; height: 320px; border-radius: 12px; overflow: hidden; border: 1px solid #ddd; }
+        /* About Section */
+        .about-section { margin-bottom: 60px; padding: 0 10px; }
+        .about-section h2 { font-size: 24px; margin-bottom: 10px; }
+        .about-section h4 { font-size: 16px; margin-bottom: 15px; color: #333; }
+        .about-section p { font-size: 15px; color: #444; margin-bottom: 20px; }
 
-        @media (max-width: 768px) { .services-grid, .contact-container { grid-template-columns: 1fr; } .hero { height: 200px; } .feature-box { flex-direction: column; text-align: center; } .feature-icon-single { margin-right: 0; margin-bottom: 20px; } }
+        /* Contact & Map Section */
+        .contact-container {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 50px; margin-top: 40px;
+            border-top: 1px solid #eee; padding-top: 40px;
+        }
+        .contact-form { display: flex; flex-direction: column; gap: 12px; }
+        .contact-form input, .contact-form textarea {
+            padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px;
+        }
+        .contact-form button {
+            background-color: var(--primary-dark); color: white;
+            padding: 14px; border: none; border-radius: 6px;
+            cursor: pointer; font-weight: bold; transition: 0.3s;
+        }
+        .contact-form button:hover { background: var(--accent-blue); }
+
+        .map-wrapper {
+            width: 100%; height: 320px;
+            border-radius: 12px; overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        /* Footer & Certifications */
+        footer {
+            margin-top: 60px; padding: 40px 0;
+            display: flex; justify-content: space-between; align-items: flex-end;
+            border-top: 1px solid #eee;
+        }
+        .footer-left p { font-size: 13px; color: #333; margin: 0; font-weight: bold; }
+        .cert-logos { display: flex; align-items: center; gap: 25px; }
+        .cert-logos img { height: 40px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s; }
+        .cert-logos img:hover { filter: grayscale(0%); opacity: 1; }
+
+        @media (max-width: 768px) {
+            .services-grid, .contact-container { grid-template-columns: 1fr; }
+            .feature-box { flex-direction: column; text-align: center; }
+            .feature-icon-single { margin-right: 0; margin-bottom: 20px; }
+            .hero { height: 200px; }
+            footer { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <nav>
-            <div class="links"><a href="#">Home</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
             <a href="#contact" class="quote-link">Request a quote</a>
         </nav>
 
-        <section class="hero"><img src="logo.png" alt="Iora Electrical"></section>
-
-        <section id="services" class="services-grid">
-            <div class="service-card"><img src="residential.png" alt="Residential"><h3>Residential.</h3><p>Safe, reliable solutions for Nottingham homes.</p></div>
-            <div class="service-card"><img src="commercial.png" alt="Commercial"><h3>Commercial.</h3><p>Expert office fit-outs and proactive maintenance.</p></div>
-            <div class="service-card"><img src="smart-home.png" alt="Smart Home"><h3>Smart Home.</h3><p>Advanced automation for the digital home.</p></div>
+        <section class="hero">
+            <img src="logo.png" alt="Iora Electrical Nottingham">
         </section>
 
-        <section class="feature-box">
-            <div class="feature-icon-single"><img src="logo-small.png" alt="Iora"></div>
-            <div class="feature-text-group">
-                <p><strong>Transparent Pricing:</strong> Competitive local rates with no hidden costs.</p>
-                <p><strong>Expert Quality:</strong> Fully certified work with a focus on safety and precision.</p>
+        <section id="services" class="services-grid">
+            <div class="service-card">
+                <img src="residential.png" alt="Residential Electrician">
+                <h3>Residential.</h3>
+                <p>Safe, reliable, and stylish electrical solutions for Nottingham homes.</p>
             </div>
+            <div class="service-card">
+                <img src="commercial.png" alt="Commercial Electrician">
+                <h3>Commercial.</h3>
+                <p>Powering Nottingham businesses with scalable infrastructure and maintenance.</p>
+            </div>
+            <div class="service-card">
+                <img src="smart-home.png" alt="Smart Home Specialist">
+                <h3>Smart Home.</h3>
+                <p>Advanced automation and data cabling for the modern digital home.</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span style="background: var(--primary-dark); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Based in Nottingham</span>
+            <h2 style="font-size: 28px; margin: 12px 0 5px;">Reliable Electrical Care</h2>
+        </div>
+
+        <section class="feature-box">
+            <div class="feature-icon-single">
+                <img src="logo-small.png" alt="Iora Icon">
+            </div>
+            <div class="feature-text-group">
+                <p><strong>Upfront Pricing:</strong> No hidden fees or "surprise" costs. Just honest, competitive rates for every job.</p>
+                <p><strong>Local Experts:</strong> We're your neighbours. We treat your home with the same respect we'd treat our own.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>About Our Residential Services</h2>
+            <h4>Your Home, Our Priority.</h4>
+            <p>At Iora Electrical, we believe every family deserves a home that is safe, efficient, and brilliantly lit. While we handle large-scale industrial projects, our heart has always been in our local community. We understand that home electrical issues can be stressful and unexpected, which is why we've built our residential service around three simple promises: <strong>honesty, transparency, and affordability.</strong></p>
+            <p>Whether you're looking to upgrade to a smart home, need a complete rewire, or just have a flickering light that's driving you crazy, our team treats your house with the same respect we'd show our own. We don't believe in "hidden fees" or technical jargon—just clear communication, fair pricing, and expert craftsmanship that fits your budget.</p>
+            <p><strong>From our family to yours, let's keep your home powered safely.</strong></p>
         </section>
 
         <section id="contact" class="contact-container">
             <div>
-                <h2>Get a Free Quote</h2>
+                <h2 style="margin-top: 0;">Get a Free Quote</h2>
                 <form action="https://formspree.io/f/maqdlpeq" method="POST" class="contact-form">
                     <input type="hidden" name="_next" value="https://ioraelectrical.co.uk/thank-you.html">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -77,20 +196,38 @@
                     <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+                <div style="margin-top: 20px;">
+                    <a href="tel:07417552480" style="font-weight: bold; color: #000; text-decoration: none; font-size: 18px;">07417552480</a>
+                    <p style="font-size: 14px; color: #666; margin: 5px 0;">tommayfield@ioraelectrical.co.uk</p>
+                </div>
             </div>
+
             <div>
-                <h2>Our Service Area</h2>
+                <h2 style="margin-top: 0;">Our Service Area</h2>
                 <div class="map-wrapper">
-                    <iframe width="100%" height="100%" frameborder="0" style="border:0" 
-                        src="https://www.google.com/maps/embed/v1/place?key=REPLACED_WITH_FREE_EMBED&q=Nottingham,UK" 
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0" 
+                        loading="lazy" 
                         allowfullscreen 
-                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
-                        <a href='https://www.google.com/maps?q=Nottingham'><img src='https://maps.googleapis.com/maps/api/staticmap?center=Nottingham&zoom=11&size=600x400&maptype=roadmap'><span>View Map</span></a>">
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153835.63220455006!2d-1.2829141703649692!3d52.95484525894178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c1d68a5146c1%3A0xc629676579808362!2sNottingham!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk">
                     </iframe>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153846.5645396556!2d-1.2985172!3d52.9548053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c202990a4247%3A0xc092e0797170566!2sNottingham!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
+
+        <footer>
+            <div class="footer-left">
+                <p>Iora Electrical Ltd.</p>
+                <p style="font-weight: normal; color: #666; font-size: 12px; margin-top: 5px;">&copy; 2026 Nottingham, UK</p>
+            </div>
+            <div class="cert-logos">
+                <img src="niceic.png" alt="NICEIC Certified">
+                <img src="napit.png" alt="NAPIT Registered">
+            </div>
+        </footer>
     </div>
+
 </body>
 </html>
