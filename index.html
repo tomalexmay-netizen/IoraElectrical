@@ -9,6 +9,8 @@
             --primary-dark: #0a1f2c;
             --primary-dark-soft: #0f2838;
             --accent-blue: #4a6fa5;
+            --accent-orange: #f97316;
+            --telegram-blue: #0088cc; /* Added Telegram color */
             --bg-page: #f5f6f8;
             --bg-card: #ffffff;
             --text-main: #111827;
@@ -101,9 +103,9 @@
         .hero-list li { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
         .hero-list li::before { content: "✓"; color: #4ade80; font-weight: bold; }
 
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
         .hero-primary {
-            background: #f97316;
+            background: var(--accent-orange);
             color: white;
             border-radius: 999px;
             padding: 10px 22px;
@@ -116,8 +118,8 @@
         }
 
         .hero-secondary { color: #e5e7eb; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+        .telegram-link { color: var(--telegram-blue) !important; font-weight: 600; }
 
-        /* HERO LOGO PANEL - UPDATED */
         .hero-logo-panel {
             background: radial-gradient(circle at top, #1f2937 0, #020617 70%);
             border-radius: 18px;
@@ -129,7 +131,6 @@
         .hero-logo-meta { display: flex; justify-content: space-between; margin-top: 15px; font-size: 11px; color: #9ca3af; text-transform: uppercase; }
         .cert-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; display: inline-block; margin-right: 5px; }
 
-        /* MAIN CONTENT */
         .main-shell { background: var(--bg-page); flex: 1; color: var(--text-main); }
         .main-inner { max-width: 1120px; margin: 0 auto; padding: 40px 20px; }
 
@@ -203,6 +204,7 @@
                     <div class="hero-actions">
                         <a href="#contact" class="hero-primary">Get a free quote</a>
                         <a href="tel:07417552480" class="hero-secondary">📞 07417552480</a>
+                        <a href="https://t.me/ioraelectrical" class="hero-secondary telegram-link">💬 Telegram</a>
                     </div>
                 </div>
 
