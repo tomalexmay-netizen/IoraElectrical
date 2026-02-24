@@ -136,7 +136,6 @@
             text-transform: uppercase;
             transition: opacity 0.2s;
         }
-
         .hero-primary:hover { opacity: 0.9; }
 
         /* BRANDING PANEL */
@@ -207,26 +206,28 @@
         }
         .service-card:hover { transform: translateY(-5px); }
 
-        /* RESIDENTIAL SECTION */
+        /* RESIDENTIAL SECTION - UK STYLE */
         .residential-section { margin-top: 80px; }
         .residential-wrap {
             overflow: hidden;
             border-radius: 16px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            height: 320px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            height: 280px; /* Slimmer, more approachable height */
+            background: #ddd;
         }
 
         .residential-banner {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center 40%; /* Focus on the front door/windows */
             display: block;
             transition: transform 0.5s ease;
         }
 
         .residential-wrap:hover .residential-banner {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         .residential-section h2 { font-size: 26px; margin-bottom: 10px; color: var(--primary-dark); }
@@ -262,9 +263,7 @@
             cursor: pointer;
             font-weight: 600;
             text-transform: uppercase;
-            transition: background 0.2s;
         }
-        .contact-form button:hover { background: var(--primary-dark-soft); }
 
         .telegram-btn {
             display: inline-block;
@@ -377,15 +376,16 @@
             <div class="residential-section">
                 <div class="residential-wrap">
                     <img class="residential-banner" 
-                         src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" 
-                         alt="Friendly neighborhood home">
+                         src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80" 
+                         alt="Classic UK residential semi-detached house">
                 </div>
                 
                 <h2>Expert Residential Care</h2>
                 <p>
-                    At Iora Electrical, we believe every family deserves a home that is safe and efficient. We understand that home electrical issues can be stressful, which is why we’ve built our service 
-                    around <strong>honesty, transparency, and affordability.</strong>
+                    At Iora Electrical, we believe every home deserves to be safe and efficient. Based in Nottingham, we provide local families with high-quality electrical solutions built on <strong>honesty, transparency, and affordability.</strong>
                 </p>
+
+                
 
                 <h3>Typical residential work includes:</h3>
                 <ul>
@@ -398,15 +398,14 @@
 
                 <h3>Why Choose Us?</h3>
                 <p>
-                    We are local Nottingham specialists. Whether you’re looking to upgrade to a smart home or just have a flickering light, 
-                    our team treats your house with respect. No hidden fees—just clear communication and expert craftsmanship that fits your budget.
+                    We treat your house with the same respect we’d show our own homes. From a simple socket change to a complete property renovation, we provide clear communication and expert craftsmanship that fits your budget.
                 </p>
             </div>
 
             <div id="contact" class="contact-grid">
                 <div>
                     <h2>Get a Free Quote</h2>
-                    <p>Have an emergency or need a project estimate? Contact our Nottingham team today.</p>
+                    <p>Need a project estimate? Contact our Nottingham team today.</p>
                     <form id="contact-form" action="https://formspree.io/f/maqdlpeq" method="POST" class="contact-form">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -426,7 +425,7 @@
                             height="100%" 
                             frameborder="0" 
                             style="border:0; border-radius: 12px;" 
-                            src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY_HERE&q=Nottingham,UK" 
+                            src="about:blank" 
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -456,7 +455,7 @@
         status.style.display = "block";
         form.style.display = "none";
       } else {
-        alert("Oops! There was a problem submitting your form. Please try again or use Telegram.");
+        alert("Oops! There was a problem submitting your form.");
       }
     }
     form.addEventListener("submit", handleSubmit);
