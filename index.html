@@ -9,12 +9,12 @@
             --primary-dark: #0a1f2c;
             --primary-dark-soft: #0f2838;
             --accent-blue: #4a6fa5;
-            --accent-telegram: #229ED9; /* Telegram Brand Color */
             --bg-page: #f5f6f8;
             --bg-card: #ffffff;
             --text-main: #111827;
             --text-muted: #6b7280;
             --border-subtle: #e5e7eb;
+            --telegram-blue: #229ED9;
         }
 
         html { scroll-behavior: smooth; }
@@ -32,7 +32,9 @@
             flex-direction: column;
         }
 
-        header { color: #fff; }
+        header {
+            color: #fff;
+        }
 
         .nav-wrap {
             max-width: 1120px;
@@ -43,13 +45,40 @@
             align-items: center;
         }
 
-        .nav-logo { display: flex; align-items: center; gap: 10px; }
-        .nav-logo img { height: 34px; width: auto; object-fit: contain; }
-        .nav-brand-text { font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        .nav-links { display: flex; gap: 18px; font-size: 14px; }
-        .nav-links a { color: #e5e7eb; text-decoration: none; font-weight: 500; }
-        .nav-links a:hover { color: #fff; }
+        .nav-logo img {
+            height: 34px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-brand-text {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
 
         .nav-cta {
             text-decoration: none;
@@ -63,6 +92,10 @@
             text-transform: uppercase;
             border: 1px solid rgba(249,250,251,0.2);
             transition: 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: #e5e7eb;
         }
 
         /* Hero */
@@ -82,7 +115,9 @@
             align-items: center;
         }
 
-        .hero-copy { color: #e5e7eb; }
+        .hero-copy {
+            color: #e5e7eb;
+        }
 
         .hero-badge {
             display: inline-flex;
@@ -98,16 +133,53 @@
             color: #cbd5f5;
         }
 
-        .hero-badge span.dot { width: 7px; height: 7px; border-radius: 999px; background: #22c55e; }
+        .hero-badge span.dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
 
-        .hero-title { font-size: clamp(28px, 4vw, 36px); margin: 14px 0 8px; font-weight: 700; }
-        .hero-subtitle { font-size: 15px; color: #cbd5f5; max-width: 480px; margin-bottom: 18px; }
+        .hero-title {
+            font-size: clamp(28px, 4vw, 36px);
+            margin: 14px 0 8px;
+            font-weight: 700;
+        }
 
-        .hero-list { list-style: none; padding: 0; margin: 0 0 20px; font-size: 14px; color: #e5e7eb; }
-        .hero-list li { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-        .hero-list li::before { content: "✓"; color: #4ade80; font-size: 13px; }
+        .hero-subtitle {
+            font-size: 15px;
+            color: #cbd5f5;
+            max-width: 480px;
+            margin-bottom: 18px;
+        }
 
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+        .hero-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+            font-size: 14px;
+            color: #e5e7eb;
+        }
+
+        .hero-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .hero-list li::before {
+            content: "✓";
+            color: #4ade80;
+            font-size: 13px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
 
         .hero-primary {
             background: #f97316;
@@ -119,27 +191,30 @@
             text-decoration: none;
             letter-spacing: 0.08em;
             text-transform: uppercase;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             box-shadow: 0 10px 25px rgba(248,113,113,0.25);
             transition: 0.2s ease;
         }
 
-        /* NEW TELEGRAM STYLE */
-        .hero-telegram {
-            background: var(--accent-telegram);
-            color: #fff;
-            border-radius: 999px;
-            padding: 9px 18px;
-            font-size: 14px;
-            font-weight: 600;
+        .hero-primary:hover {
+            background: #fb923c;
+        }
+
+        .hero-secondary {
+            color: #e5e7eb;
+            font-size: 13px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            transition: 0.2s ease;
+            gap: 6px;
         }
-        .hero-telegram:hover { opacity: 0.9; transform: translateY(-1px); }
 
-        .hero-secondary { color: #e5e7eb; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .hero-secondary span.icon {
+            font-size: 16px;
+        }
 
         .hero-logo-panel {
             background: radial-gradient(circle at top, #1f2937 0, #020617 70%);
@@ -147,136 +222,432 @@
             padding: 18px 18px 16px;
             border: 1px solid rgba(148,163,184,0.4);
             box-shadow: 0 18px 40px rgba(15,23,42,0.7);
-            display: flex; flex-direction: column; gap: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        .hero-logo-panel-inner { background: #0b1f30; border-radius: 14px; padding: 16px; display: flex; justify-content: center; align-items: center; }
-        .hero-logo-panel-inner img { max-width: 100%; max-height: 120px; object-fit: contain; }
+        .hero-logo-panel-inner {
+            background: #0b1f30;
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        .hero-logo-meta { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #9ca3af; }
+        .hero-logo-panel-inner img {
+            max-width: 100%;
+            max-height: 120px;
+            object-fit: contain;
+        }
 
-        /* Main sections */
-        .main-shell { background: var(--bg-page); flex: 1; }
-        .main-inner { max-width: 1120px; margin: 0 auto; padding: 32px 20px 40px; }
+        .hero-logo-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #9ca3af;
+        }
 
-        .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-bottom: 40px; }
-        .service-card { background: var(--bg-card); border-radius: 14px; border: 1px solid var(--border-subtle); overflow: hidden; box-shadow: 0 10px 25px rgba(15,23,42,0.06); }
-        .service-card img { width: 100%; height: 180px; object-fit: cover; }
-        .service-body { padding: 14px 14px 16px; }
+        .hero-logo-meta span.label {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
 
-        .feature-strip { background: #0f172a; color: #e5e7eb; border-radius: 16px; padding: 18px; display: flex; align-items: center; gap: 18px; margin-bottom: 36px; }
-        .feature-strip-icon img { width: 56px; height: 56px; border-radius: 12px; }
+        .hero-logo-meta span.cert {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-        /* Contact Section */
-        .contact-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 26px; margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--border-subtle); }
-        .contact-form { display: flex; flex-direction: column; gap: 10px; }
-        .contact-form input, .contact-form textarea { padding: 10px; border-radius: 6px; border: 1px solid var(--border-subtle); font-family: inherit; }
-        .contact-form button { background: var(--primary-dark); color: #fff; border-radius: 999px; padding: 10px; border: none; font-weight: 600; cursor: pointer; text-transform: uppercase; }
+        .hero-logo-meta span.cert-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
 
-        .contact-details { margin-top: 15px; font-size: 14px; line-height: 1.6; }
-        .contact-details a { font-weight: 700; color: var(--primary-dark); text-decoration: none; }
-        .telegram-link { color: var(--accent-telegram) !important; display: flex; align-items: center; gap: 5px; margin-top: 5px; }
+        /* Main content shell */
+        .main-shell {
+            background: var(--bg-page);
+            flex: 1;
+        }
 
-        .map-wrapper { width: 100%; height: 280px; border-radius: 10px; overflow: hidden; }
+        .main-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 32px 20px 40px;
+        }
 
-        footer { border-top: 1px solid rgba(15,23,42,0.7); background: #020617; color: #9ca3af; padding: 20px; }
-        .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+        /* Services */
+        .section-header {
+            text-align: center;
+            margin-bottom: 26px;
+        }
 
+        .section-kicker {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent-blue);
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin: 0 0 6px;
+            color: var(--primary-dark);
+        }
+
+        .section-subtitle {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 14px 14px 16px;
+        }
+
+        .service-body h3 {
+            margin: 0 0 6px;
+            font-size: 17px;
+            color: var(--primary-dark);
+        }
+
+        .service-body p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Feature strip */
+        .feature-strip {
+            background: #0f172a;
+            color: #e5e7eb;
+            border-radius: 16px;
+            padding: 18px 18px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 36px;
+        }
+
+        .feature-strip-icon img {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            object-fit: contain;
+        }
+
+        .feature-strip-text p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        .feature-strip-text strong {
+            font-weight: 600;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 26px;
+            margin-bottom: 40px;
+        }
+
+        .about-copy h2 {
+            font-size: 22px;
+            margin: 0 0 6px;
+            color: var(--primary-dark);
+        }
+
+        .about-copy h4 {
+            font-size: 15px;
+            margin: 0 0 12px;
+            color: #374151;
+        }
+
+        .about-copy p {
+            font-size: 14px;
+            color: #4b5563;
+            margin: 0 0 14px;
+        }
+
+        .about-highlight {
+            font-weight: 600;
+        }
+
+        .about-side {
+            background: var(--bg-card);
+            border-radius: 14px;
+            border: 1px solid var(--border-subtle);
+            padding: 14px 16px 16px;
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        .about-side h3 {
+            margin: 0 0 8px;
+            font-size: 15px;
+            color: var(--primary-dark);
+        }
+
+        .about-side ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .about-side li {
+            margin-bottom: 6px;
+        }
+
+        /* Contact & map */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 26px;
+            margin-top: 32px;
+            padding-top: 26px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .contact-grid h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 20px;
+            color: var(--primary-dark);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form label {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-top: 3px;
+            padding: 10px 11px;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(74,111,165,0.15);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .contact-form button {
+            margin-top: 4px;
+            background: var(--primary-dark);
+            color: #fff;
+            border-radius: 999px;
+            padding: 10px 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: 0.2s ease;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent-blue);
+        }
+
+        .contact-details {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .contact-details a {
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-details p {
+            margin: 4px 0 0;
+            color: var(--text-muted);
+        }
+
+        /* Telegram button */
+        .telegram-btn {
+            display: inline-block;
+            margin-top: 14px;
+            background: var(--telegram-blue);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .telegram-btn:hover {
+            opacity: 0.9;
+        }
+
+        .map-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            border: 1px solid var(--border-subtle);
+            padding: 10px;
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(15,23,42,0.7);
+            background: #020617;
+            color: #9ca3af;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 16px 20px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+            font-size: 12px;
+        }
+
+        .footer-left p {
+            margin: 0;
+        }
+
+        .footer-left p:first-child {
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+
+        .footer-certs {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .footer-certs img {
+            height: 34px;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: 0.2s ease;
+        }
+
+        .footer-certs img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Accessibility */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        /* Responsive */
         @media (max-width: 900px) {
-            .hero-inner, .services-grid, .contact-grid { grid-template-columns: 1fr; }
-            .hero-logo-panel { max-width: 420px; margin: 0 auto; }
+            .hero-inner {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-logo-panel {
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
         }
-    </style>
-</head>
-<body>
 
-<div class="page-shell">
-    <header>
-        <div class="nav-wrap">
-            <div class="nav-logo">
-                <img src="logo-small.png" alt="Iora Electrical logo">
-                <span class="nav-brand-text">Iora Electrical</span>
-            </div>
-            <nav class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <a href="#contact" class="nav-cta">Request a quote</a>
-        </div>
+        @media (max-width: 720px) {
+            .nav-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
 
-        <div class="hero-shell">
-            <div class="hero-inner">
-                <div class="hero-copy">
-                    <div class="hero-badge"><span class="dot"></span><span>Based in Nottingham</span></div>
-                    <h1 class="hero-title">Reliable electrical care for homes and businesses.</h1>
-                    <p class="hero-subtitle">Keeping your property safe, efficient, and brilliantly lit.</p>
-                    <ul class="hero-list">
-                        <li>Upfront pricing with no hidden extras.</li>
-                        <li>Local, certified electricians.</li>
-                    </ul>
-                    <div class="hero-actions">
-                        <a href="#contact" class="hero-primary">Get a quote</a>
-                        <a href="https://t.me/ioraelectrical" target="_blank" class="hero-telegram">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.35-.97.53-1.33.52-.4-.01-1.18-.23-1.76-.41-.71-.23-1.27-.35-1.23-.74.02-.21.31-.42.87-.63 3.42-1.49 5.7-2.48 6.84-2.97 3.27-1.4 3.95-1.64 4.39-1.65.1 0 .32.02.47.14.12.1.15.24.16.34.01.07.02.2.01.29z"/></svg>
-                            Telegram Us
-                        </a>
-                        <a href="tel:07417552480" class="hero-secondary">📞 07417552480</a>
-                    </div>
-                </div>
+            .nav-links {
+                order: 3;
+                flex-wrap: wrap;
+            }
 
-                <aside class="hero-logo-panel">
-                    <div class="hero-logo-panel-inner">
-                        <img src="logo.png" alt="Iora Electrical Nottingham">
-                    </div>
-                    <div class="hero-logo-meta">
-                        <span class="label">Nottingham • Electrical</span>
-                        <span class="cert"><span class="cert-dot"></span>Certified</span>
-                    </div>
-                </aside>
-            </div>
-        </div>
-    </header>
+            .nav-cta {
+                order: 2;
+            }
 
-    <main class="main-shell">
-        <div class="main-inner">
-            <div class="services-grid">
-                <article class="service-card"><img src="residential.png" alt="Residential"><div class="service-body"><h3>Residential</h3><p>Solutions for Nottingham homes.</p></div></article>
-                <article class="service-card"><img src="commercial.png" alt="Commercial"><div class="service-body"><h3>Commercial</h3><p>Powering local businesses.</p></div></article>
-                <article class="service-card"><img src="smart-home.png" alt="Smart Home"><div class="service-body"><h3>Smart Home</h3><p>Automation and data.</p></div></article>
-            </div>
+            .hero-inner {
+                padding-top: 24px;
+            }
 
-            <section id="contact" class="contact-grid">
-                <div>
-                    <h2>Get a Free Quote</h2>
-                    <form action="https://formspree.io/f/maqdlpeq" method="POST" class="contact-form">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                    <div class="contact-details">
-                        <p><strong>Call/Text:</strong> <a href="tel:07417552480">07417552480</a></p>
-                        <p><strong>Email:</strong> tommayfield@ioraelectrical.co.uk</p>
-                        <p><strong>Direct Chat:</strong> <a href="https://t.me/ioraelectrical" target="_blank" class="telegram-link">Message us on Telegram</a></p>
-                    </div>
-                </div>
-                <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153842.1287661642!2d-1.291350868200678!3d52.95484511634867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c20294da64d1%3A0xc31057e937d7c66e!2sNottingham!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            <div><p>Iora Electrical Ltd. © 2026 Nottingham, UK</p></div>
-            <div class="footer-certs">
-                <img src="niceic.png" alt="NICEIC" style="height:30px; margin-left:10px;">
-                <img src="napit.png" alt="NAPIT" style="height:30px; margin-left:10px;">
-            </div>
-        </div>
-    </footer>
-</div>
-
-</body>
-</html>
+            .services-grid {
+                grid
