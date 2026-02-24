@@ -28,7 +28,7 @@
             line-height: 1.5;
         }
 
-        /* --- HERO SECTION (The Integrated Dark Theme) --- */
+        /* --- HERO SECTION --- */
         .hero-section {
             background: radial-gradient(circle at top left, #162e44 0%, #0a1f2c 30%, #050b10 70%, #020308 100%);
             color: white;
@@ -70,7 +70,6 @@
             align-items: center;
         }
 
-        /* Left Side Content */
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -113,7 +112,7 @@
         .hero-contact-links a { color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .telegram-link { color: var(--telegram-blue) !important; font-weight: 600; }
 
-        /* --- THE NEW CLEAN RIGHT PANEL --- */
+        /* --- CLEAN LOGO SIDE (No Boxes) --- */
         .hero-logo-panel {
             display: flex;
             flex-direction: column;
@@ -127,11 +126,8 @@
             max-width: 350px;
             margin-bottom: 25px;
             filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
-            transition: transform 0.4s ease;
         }
         
-        .hero-visual:hover { transform: scale(1.02); }
-
         .hero-visual img { width: 100%; height: auto; display: block; }
 
         .hero-logo-meta {
@@ -155,11 +151,10 @@
 
         .cert-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; }
 
-        /* --- MAIN CONTENT AREAS --- */
+        /* --- SECTIONS --- */
         .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { font-size: 32px; color: var(--primary-dark); margin: 0; }
-        .section-title p { color: var(--text-muted); margin-top: 10px; }
 
         .services-grid {
             display: grid;
@@ -175,12 +170,11 @@
             transition: 0.3s;
         }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .service-card img { width: 100%; height: 220px; object-fit: cover; }
+        .service-card img { width: 100%; height: 250px; object-fit: cover; }
         .service-content { padding: 25px; }
         .service-content h3 { margin: 0 0 10px; font-size: 20px; color: var(--primary-dark); }
         .service-content p { color: var(--text-muted); font-size: 15px; margin: 0; }
 
-        /* Contact & Map */
         .contact-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -196,7 +190,6 @@
         }
 
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
         .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
@@ -214,15 +207,12 @@
             border-radius: 8px;
             font-weight: 700;
             cursor: pointer;
-            transition: 0.2s;
         }
-        .submit-btn:hover { opacity: 0.9; }
 
         .map-container {
             border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--border-subtle);
-            height: 100%;
             min-height: 400px;
         }
 
@@ -230,7 +220,6 @@
             background: #020617;
             color: white;
             padding: 40px 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
         }
         .footer-wrap {
             max-width: 1200px;
@@ -239,13 +228,12 @@
             justify-content: space-between;
             align-items: center;
         }
-        .footer-info p { margin: 5px 0; font-size: 14px; color: var(--text-muted); }
 
-        /* Responsive */
+        .footer-badges img { height: 40px; margin-left: 15px; opacity: 0.8; }
+
         @media (max-width: 992px) {
             .hero-container { grid-template-columns: 1fr; text-align: center; }
             .hero-badge, .hero-btns, .hero-list li { justify-content: center; }
-            .hero-subtitle { margin-left: auto; margin-right: auto; }
             .contact-layout { grid-template-columns: 1fr; }
         }
     </style>
@@ -271,7 +259,7 @@
                 Based in Nottingham
             </div>
             <h1 class="hero-title">Reliable electrical care for homes and businesses.</h1>
-            <p class="hero-subtitle">From smart home upgrades to full rewires, we provide professional, certified electrical services across Nottinghamshire.</p>
+            <p class="hero-subtitle">From rewires and fault-finding to smart home upgrades, we keep your property safe, efficient, and brilliantly lit.</p>
             
             <ul class="hero-list">
                 <li>Upfront pricing with no hidden extras.</li>
@@ -290,7 +278,7 @@
 
         <div class="hero-logo-panel">
             <div class="hero-visual">
-                <img src="logo-hero.png" alt="Iora Electrical Logo">
+                <img src="logo.png" alt="Iora Electrical Logo">
             </div>
             <div class="hero-logo-meta">
                 <span>Nottingham • Electrical & Smart Home</span>
@@ -307,26 +295,25 @@
     <section id="services" class="section">
         <div class="section-title">
             <h2>Our Services</h2>
-            <p>Specialist electrical solutions tailored to your needs.</p>
         </div>
         
         <div class="services-grid">
             <div class="service-card">
-                <img src="service1.jpg" alt="Residential Wiring">
+                <img src="residential.png" alt="Residential Wiring">
                 <div class="service-content">
                     <h3>Residential Services</h3>
                     <p>Fault finding, extra sockets, lighting installations, and full home rewires.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="service2.jpg" alt="Commercial Electrical">
+                <img src="commercial.png" alt="Commercial Electrical">
                 <div class="service-content">
                     <h3>Commercial Services</h3>
                     <p>Testing, maintenance, and power solutions for offices and retail spaces.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="service3.jpg" alt="Smart Home">
+                <img src="smart-home.png" alt="Smart Home">
                 <div class="service-content">
                     <h3>Smart Home & EV</h3>
                     <p>App-controlled lighting, smart heating, and EV charger installations.</p>
@@ -338,31 +325,18 @@
     <section id="contact" class="section">
         <div class="section-title">
             <h2>Get a Quote</h2>
-            <p>Tell us about your project and we'll get back to you shortly.</p>
         </div>
 
         <div class="contact-layout">
             <form class="contact-form" action="https://formspree.io/f/maqdlpeq" method="POST">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" name="name" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" name="email" required placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label>How can we help?</label>
-                    <textarea name="message" rows="5" required placeholder="Describe your electrical needs..."></textarea>
-                </div>
+                <div class="form-group"><input type="text" name="name" required placeholder="Your Name"></div>
+                <div class="form-group"><input type="email" name="email" required placeholder="Email Address"></div>
+                <div class="form-group"><textarea name="message" rows="5" required placeholder="How can we help?"></textarea></div>
                 <button type="submit" class="submit-btn">Send Inquiry</button>
             </form>
 
             <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153835.6565431668!2d-1.2828383!3d52.954845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c20250fc68b5%3A0xbe58e80bc8f7c978!2sNottingham!5e0!3m2!1sen!2suk!4v1700000000000" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153835.1585501815!2d-1.2917719602058428!3d52.95482313364491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c1d872db2e61%3A0x773d57f6cfb33d0!2sNottingham!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -370,13 +344,13 @@
 
 <footer>
     <div class="footer-wrap">
-        <div class="footer-info">
+        <div>
             <p><strong>Iora Electrical Ltd</strong></p>
-            <p>tommayfield@ioraelectrical.co.uk</p>
-            <p>© 2026 Iora Electrical. All rights reserved.</p>
+            <p>© 2026 Nottingham, UK</p>
         </div>
         <div class="footer-badges">
-            <span style="opacity: 0.5; font-size: 12px;">NICEIC PART P REGISTERED</span>
+            <img src="niceic.png" alt="NICEIC">
+            <img src="napit.png" alt="NAPIT">
         </div>
     </div>
 </footer>
