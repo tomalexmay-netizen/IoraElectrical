@@ -137,6 +137,8 @@
             transition: opacity 0.2s;
         }
 
+        .hero-primary:hover { opacity: 0.9; }
+
         /* BRANDING PANEL */
         .hero-logo-panel {
             background: #0b1f30;
@@ -205,14 +207,14 @@
         }
         .service-card:hover { transform: translateY(-5px); }
 
-        /* RESIDENTIAL SECTION UPDATES */
+        /* RESIDENTIAL SECTION */
         .residential-section { margin-top: 80px; }
         .residential-wrap {
             overflow: hidden;
             border-radius: 16px;
             margin-bottom: 40px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            height: 320px; /* Smaller, more compact height */
+            height: 320px;
         }
 
         .residential-banner {
@@ -228,7 +230,7 @@
         }
 
         .residential-section h2 { font-size: 26px; margin-bottom: 10px; color: var(--primary-dark); }
-        .residential-section h3 { font-size: 20px; margin-top: 0; color: var(--primary-dark-soft); }
+        .residential-section h3 { font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: var(--primary-dark-soft); }
         .residential-section p { line-height: 1.7; color: var(--text-main); margin-bottom: 18px; }
         .residential-section ul { padding-left: 20px; color: var(--text-main); line-height: 2; }
 
@@ -247,6 +249,8 @@
             border: 1px solid var(--border-subtle);
             border-radius: 8px;
             font-size: 15px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .contact-form button {
@@ -258,7 +262,9 @@
             cursor: pointer;
             font-weight: 600;
             text-transform: uppercase;
+            transition: background 0.2s;
         }
+        .contact-form button:hover { background: var(--primary-dark-soft); }
 
         .telegram-btn {
             display: inline-block;
@@ -269,14 +275,16 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
+            text-align: center;
         }
 
         .map-frame {
             width: 100%;
-            height: 400px;
+            height: 440px;
             border: 0;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            background: #e5e7eb;
         }
 
         #form-status {
@@ -372,22 +380,12 @@
                          src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" 
                          alt="Friendly neighborhood home">
                 </div>
-                <h2>About Our Residential Services</h2>
-                <h3>Your Home, Our Priority.</h3>
+                
+                <h2>Expert Residential Care</h2>
                 <p>
-                    At Iora Electrical, we believe every family deserves a home that is safe, efficient, and brilliantly lit. 
-                    We understand that home electrical issues can be stressful, which is why we’ve built our residential service 
+                    At Iora Electrical, we believe every family deserves a home that is safe and efficient. We understand that home electrical issues can be stressful, which is why we’ve built our service 
                     around <strong>honesty, transparency, and affordability.</strong>
                 </p>
-                <p>
-                    Whether you’re looking to upgrade to a smart home, need a complete rewire, or just have a flickering light, 
-                    our team treats your house with respect. No hidden fees—just clear communication and expert craftsmanship that fits your budget.
-                </p>
-                
-                
-
-[Image of house electrical panel wiring diagram]
-
 
                 <h3>Typical residential work includes:</h3>
                 <ul>
@@ -397,13 +395,19 @@
                     <li>EV charger and smart home installations.</li>
                     <li>Fault finding and remedial work.</li>
                 </ul>
+
+                <h3>Why Choose Us?</h3>
+                <p>
+                    We are local Nottingham specialists. Whether you’re looking to upgrade to a smart home or just have a flickering light, 
+                    our team treats your house with respect. No hidden fees—just clear communication and expert craftsmanship that fits your budget.
+                </p>
             </div>
 
             <div id="contact" class="contact-grid">
                 <div>
                     <h2>Get a Free Quote</h2>
                     <p>Have an emergency or need a project estimate? Contact our Nottingham team today.</p>
-                    <form id="contact-form" action="https://formspree.io/f/maqdlpeq" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/maqdlpeq" method="POST" class="contact-form">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
@@ -415,12 +419,17 @@
 
                 <div>
                     <h2>Our Service Area</h2>
-                    <iframe 
-                        class="map-frame" 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153835.63604859664!2d-1.284758712613768!3d52.95482343825838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c2049e67d267%3A0x696f48037385d064!2sNottingham!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+                    <p>Proudly serving Nottingham and the surrounding areas.</p>
+                    <div class="map-frame">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0; border-radius: 12px;" 
+                            src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY_HERE&q=Nottingham,UK" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
