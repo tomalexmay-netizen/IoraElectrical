@@ -206,34 +206,47 @@
         }
         .service-card:hover { transform: translateY(-5px); }
 
-        /* RESIDENTIAL SECTION - UK STYLE */
+        /* RESIDENTIAL SECTION */
         .residential-section { margin-top: 80px; }
         .residential-wrap {
             overflow: hidden;
             border-radius: 16px;
             margin-bottom: 40px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            height: 280px; /* Slimmer, more approachable height */
-            background: #ddd;
+            height: 320px;
+            background: #ccc;
         }
 
         .residential-banner {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 40%; /* Focus on the front door/windows */
+            object-position: center;
             display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .residential-wrap:hover .residential-banner {
-            transform: scale(1.02);
         }
 
         .residential-section h2 { font-size: 26px; margin-bottom: 10px; color: var(--primary-dark); }
         .residential-section h3 { font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: var(--primary-dark-soft); }
         .residential-section p { line-height: 1.7; color: var(--text-main); margin-bottom: 18px; }
-        .residential-section ul { padding-left: 20px; color: var(--text-main); line-height: 2; }
+        .residential-section ul { padding-left: 20px; color: var(--text-main); line-height: 2; margin-bottom: 40px;}
+
+        /* AREA LIST */
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .area-tag {
+            background: #fff;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid var(--border-subtle);
+            color: var(--primary-dark-soft);
+            font-weight: 500;
+        }
 
         /* CONTACT + MAP */
         .contact-grid {
@@ -376,16 +389,14 @@
             <div class="residential-section">
                 <div class="residential-wrap">
                     <img class="residential-banner" 
-                         src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80" 
-                         alt="Classic UK residential semi-detached house">
+                         src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" 
+                         alt="Nottingham Residential Property">
                 </div>
                 
                 <h2>Expert Residential Care</h2>
                 <p>
                     At Iora Electrical, we believe every home deserves to be safe and efficient. Based in Nottingham, we provide local families with high-quality electrical solutions built on <strong>honesty, transparency, and affordability.</strong>
                 </p>
-
-                
 
                 <h3>Typical residential work includes:</h3>
                 <ul>
@@ -396,10 +407,18 @@
                     <li>Fault finding and remedial work.</li>
                 </ul>
 
-                <h3>Why Choose Us?</h3>
-                <p>
-                    We treat your house with the same respect we’d show our own homes. From a simple socket change to a complete property renovation, we provide clear communication and expert craftsmanship that fits your budget.
-                </p>
+                <h3>Local Service Areas</h3>
+                <p>We provide professional electrical services across the whole of Nottinghamshire, including:</p>
+                <div class="area-grid">
+                    <div class="area-tag">West Bridgford</div>
+                    <div class="area-tag">Beeston</div>
+                    <div class="area-tag">Wollaton</div>
+                    <div class="area-tag">Arnold</div>
+                    <div class="area-tag">Sherwood</div>
+                    <div class="area-tag">Bramcote</div>
+                    <div class="area-tag">Long Eaton</div>
+                    <div class="area-tag">Nottingham City</div>
+                </div>
             </div>
 
             <div id="contact" class="contact-grid">
@@ -418,7 +437,6 @@
 
                 <div>
                     <h2>Our Service Area</h2>
-                    <p>Proudly serving Nottingham and the surrounding areas.</p>
                     <div class="map-frame">
                         <iframe 
                             width="100%" 
