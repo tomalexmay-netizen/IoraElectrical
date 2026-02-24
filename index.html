@@ -10,6 +10,7 @@
             --primary-dark: #0a1f2c;
             --primary-dark-soft: #0f2838;
             --accent-blue: #4a6fa5;
+            --accent-orange: #f97316;
             --bg-page: #f5f6f8;
             --bg-card: #ffffff;
             --text-main: #111827;
@@ -95,7 +96,7 @@
         .hero-inner {
             max-width: 1120px;
             margin: 0 auto;
-            padding: 32px 20px 40px;
+            padding: 60px 20px 80px;
             display: grid;
             grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
             gap: 32px;
@@ -121,104 +122,81 @@
         }
 
         .hero-title {
-            font-size: clamp(28px, 4vw, 36px);
-            margin: 14px 0 8px;
+            font-size: clamp(28px, 4vw, 48px);
+            margin: 24px 0 16px;
             font-weight: 700;
+            line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 15px;
+            font-size: 18px;
             color: #cbd5f5;
             max-width: 480px;
-            margin-bottom: 18px;
-        }
-
-        .hero-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 20px;
-            font-size: 14px;
-            color: #e5e7eb;
-        }
-
-        .hero-list li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 6px;
-        }
-
-        .hero-list li::before {
-            content: "✓";
-            color: #4ade80;
-            font-size: 13px;
+            margin-bottom: 24px;
+            line-height: 1.6;
         }
 
         .hero-actions {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
+            gap: 15px;
         }
 
         .hero-primary {
-            background: #f97316;
-            color: #111827;
+            background: var(--accent-orange);
+            color: #fff;
             border-radius: 999px;
-            padding: 9px 18px;
+            padding: 12px 24px;
             font-size: 14px;
             font-weight: 600;
             text-decoration: none;
-            letter-spacing: 0.08em;
             text-transform: uppercase;
-            transition: 0.2s ease;
         }
 
-        .hero-primary:hover {
-            background: #fb923c;
-        }
-
-        .hero-secondary {
-            color: #e5e7eb;
-            font-size: 13px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* BRANDING PANEL (IMPROVED LOGO FIT) */
+        /* BRANDING PANEL (rebuilt in HTML/CSS) */
         .hero-logo-panel {
             background: #0b1f30;
             border-radius: 18px;
-            padding: 24px;
+            padding: 28px;
             border: 1px solid rgba(148,163,184,0.4);
             box-shadow: 0 18px 40px rgba(15,23,42,0.7);
             max-width: 480px;
             margin-left: auto;
         }
 
-        .hero-logo-panel-inner {
-            background: #0b1f30;
-            border-radius: 14px;
-            padding: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-logo-panel-inner img {
+        .hero-logo-panel img {
             width: 100%;
-            max-width: 380px;
+            max-width: 360px;
             height: auto;
-            object-fit: contain;
             display: block;
+            margin: 0 auto 18px;
         }
 
-        .hero-logo-meta {
+        .panel-text {
+            text-align: center;
+            color: #e5e7eb;
+        }
+
+        .panel-text h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .panel-text p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: #cbd5f5;
+        }
+
+        .panel-divider {
+            height: 1px;
+            background: rgba(148,163,184,0.3);
+            margin: 18px 0;
+        }
+
+        .panel-meta {
             display: flex;
             justify-content: space-between;
-            margin-top: 10px;
             font-size: 12px;
             color: #cbd5f5;
         }
@@ -228,21 +206,21 @@
             height: 8px;
             background: #22c55e;
             border-radius: 50%;
+            display: inline-block;
         }
 
         /* MAIN CONTENT */
         .main-shell {
             background: var(--bg-page);
-            flex: 1;
+            padding: 80px 0;
         }
 
         .main-inner {
             max-width: 1120px;
             margin: 0 auto;
-            padding: 32px 20px 40px;
+            padding: 0 20px;
         }
 
-        /* SERVICES */
         .section-header {
             text-align: center;
             margin-bottom: 26px;
@@ -262,173 +240,62 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
         }
 
         .service-card {
-            background: var(--bg-card);
-            border-radius: 14px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
             border: 1px solid var(--border-subtle);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .service-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .service-body {
-            padding: 14px 14px 16px;
-        }
-
-        .service-body h3 {
-            margin: 0 0 6px;
-            font-size: 17px;
-            color: var(--primary-dark);
-        }
-
-        .service-body p {
-            margin: 0;
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        /* CONTACT FORM */
+        /* CONTACT */
         .contact-grid {
+            margin-top: 80px;
             display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-            gap: 26px;
-            margin-top: 32px;
-            padding-top: 26px;
-            border-top: 1px solid var(--border-subtle);
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
         }
 
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 15px;
         }
 
-        .contact-form label {
-            display: flex;
-            flex-direction: column;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-muted);
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            margin-top: 6px;
-            padding: 12px 14px;
-            border-radius: 8px;
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
             border: 1px solid var(--border-subtle);
-            font-size: 15px;
-            background: #fff;
-            transition: 0.2s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 0 3px rgba(74,111,165,0.15);
-            outline: none;
-        }
-
-        .contact-form textarea {
-            min-height: 130px;
-            resize: vertical;
+            border-radius: 8px;
         }
 
         .contact-form button {
-            margin-top: 4px;
             background: var(--primary-dark);
-            color: #fff;
-            border-radius: 999px;
-            padding: 12px 18px;
+            color: white;
+            padding: 15px;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 14px;
             font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            transition: 0.2s ease;
         }
 
-        .contact-form button:hover {
-            background: var(--accent-blue);
-        }
-
-        /* TELEGRAM BUTTON */
         .telegram-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 14px;
-            padding: 10px 16px;
+            display: inline-block;
+            margin-top: 12px;
             background: #229ED9;
-            color: #fff;
-            border-radius: 999px;
-            font-size: 14px;
-            font-weight: 600;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: 600;
         }
 
-        /* FOOTER */
-        footer {
-            border-top: 1px solid rgba(15,23,42,0.7);
-            background: #020617;
-            color: #9ca3af;
-        }
-
-        .footer-inner {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 16px 20px 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 18px;
-            font-size: 12px;
-        }
-
-        .footer-certs img {
-            height: 34px;
-            filter: grayscale(100%);
-            opacity: 0.8;
-            transition: 0.2s ease;
-        }
-
-        .footer-certs img:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 900px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 720px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero-inner, .services-grid, .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -436,35 +303,97 @@
 <body>
 <div class="page-shell">
 
-    <!-- NAVIGATION -->
     <header>
         <div class="nav-wrap">
             <div class="nav-logo">
                 <img src="logo.png" alt="Iora Electrical Logo">
             </div>
-
             <nav class="nav-links">
                 <a href="#">Home</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
-
             <a href="#contact" class="nav-cta">Request a quote</a>
         </div>
+    </header>
 
-        <!-- HERO -->
-        <div class="hero-shell">
-            <div class="hero-inner">
+    <div class="hero-shell">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <div class="hero-badge">
+                    <span>Based in Nottingham</span>
+                </div>
+                <h1 class="hero-title">Reliable electrical care for homes and businesses.</h1>
+                <p class="hero-subtitle">
+                    From rewires and fault-finding to smart home upgrades, we keep your property safe, efficient, and brilliantly lit.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="hero-primary">Get a Free Quote</a>
+                </div>
+            </div>
 
-                <div class="hero-copy">
-                    <div class="hero-badge">
-                        <span class="dot"></span>
-                        <span>Based in Nottingham</span>
-                    </div>
+            <!-- BRANDING PANEL -->
+            <div class="hero-logo-panel">
+                <img src="logo.png" alt="Iora Electrical Logo">
 
-                    <h1 class="hero-title">Reliable electrical care for homes and businesses.</h1>
+                <div class="panel-text">
+                    <p><strong>Precision Power Solutions.</strong></p>
+                    <p>Industrial. Reliable. Modern.</p>
+                </div>
 
-                    <p class="hero-subtitle">
-                        From rewires and fault-finding to smart home upgrades, we keep your property safe, efficient, and brilliantly lit.
-                    </p>
+                <div class="panel-divider"></div>
 
+                <div class="panel-meta">
+                    <span>NOTTINGHAM • ELECTRICAL & SMART HOME</span>
+                    <span><span class="cert-dot"></span> Certified & insured</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="services" class="main-shell">
+        <div class="main-inner">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Professional solutions for every electrical need.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential</h3>
+                    <p>Complete home rewiring, lighting installation, and socket upgrades.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Smart Home</h3>
+                    <p>Installation of smart thermostats, security cameras, and automated lighting.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial</h3>
+                    <p>Maintenance, EICR reports, and emergency lighting for businesses.</p>
+                </div>
+            </div>
+
+            <div id="contact" class="contact-grid">
+                <div>
+                    <h2>Get In Touch</h2>
+                    <p>Have an emergency or need a quote? Contact our Nottingham team today.</p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/maqdlpeq" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Tell us about your project" rows="5"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <a href="https://t.me/+447417552480" class="telegram-btn">Message us on Telegram</a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #020617; color: white; padding: 20px; text-align: center; font-size: 12px;">
+        <p>&copy; 2024 Iora Electrical. All rights reserved.</p>
+    </footer>
+
+</div>
+</body>
+</html>
